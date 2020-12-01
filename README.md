@@ -1,5 +1,7 @@
 <h1 align="center">🌐 Adam's Opinionated Sapper Template</h1>
 
+Forked from babichjacob [@babichjacob](https://github.com/babichjacob)'s [`Opinionated Sapper`](https://github.com/babichjacob/sapper-firebase-typescript-graphql-tailwindcss-actions-template)
+
 - [Sapper for Svelte](https://sapper.svelte.dev/)
   - [Official VS Code Extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
 - [Firebase](https://firebase.google.com/)
@@ -7,7 +9,6 @@
   - [Hosting](https://firebase.google.com/docs/hosting) for static assets
   - Thanks to [@Eckhardt-D](https://github.com/Eckhardt-D)'s [`sapper-firebase-starter`](https://github.com/Eckhardt-D/sapper-firebase-starter)
   - Thanks to [@nhristov](https://github.com/nhristov)'s [`sapper-template-firebase`](https://github.com/nhristov/sapper-template-firebase)
-  - Thanks to [@babichjacob](https://github.com/babichjacob)'s [`Opinionated Sapper`](https://github.com/babichjacob/sapper-firebase-typescript-graphql-tailwindcss-actions-template)
 - [TypeScript](https://www.typescriptlang.org/)
   - [TypeGraphQL](https://typegraphql.com/)
   - Inside Svelte components, thanks to [`svelte-preprocess`](https://github.com/kaisermann/svelte-preprocess)
