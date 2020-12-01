@@ -45,6 +45,16 @@ export default {
 				hydratable: true,
 				emitCss: true,
 				preprocess,
+				onwarn: (warning, handler) => {
+					// e.g. don't warn on a11y-autofocus
+					if (warning.code.includes('a11y')) {
+						console.log(warning.code)
+						return
+					}
+	
+					// let Rollup handle all other warnings normally
+					handler(warning)
+				}
 			}),
 			resolve({
 				browser: true,
@@ -149,6 +159,16 @@ export default {
 				generate: "ssr",
 				dev,
 				preprocess,
+				onwarn: (warning, handler) => {
+					// e.g. don't warn on a11y-autofocus
+					if (warning.code.includes('a11y')) {
+						console.log(warning.code)
+						return
+					}
+	
+					// let Rollup handle all other warnings normally
+					handler(warning)
+				}
 			}),
 			resolve({
 				dedupe: ["svelte"],

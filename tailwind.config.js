@@ -25,5 +25,8 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
+	corePlugins: {
+	 outline: false,
+	},
 	plugins: [],
 };

@@ -25,6 +25,7 @@
 	"scripts": {
 		"eslint": "eslint",
 		"eslint:fix": "eslint --fix ./*.js ./src/*.ts ./src/components/**/*.svelte ./src/graphql/**/*.ts ./src/routes/**/*.svelte ./src/routes/**/*.ts",
+		"prettier": "prettier --write --svelte-sort-order scripts-markup-styles ./src/**/**.svelte",
 		"validate": "svelte-check --ignore src/node_modules/@sapper",
 		"validate:dev": "svelte-check --ignore src/node_modules/@sapper --watch",
 		"firebase": "firebase",
@@ -81,6 +82,7 @@
 		"eslint-config-airbnb-base": "^14.2.1",
 		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-svelte3": "^2.7.3",
+		"get-intrinsic": "^1.0.1",
 		"graphql": "^15.4.0",
 		"kleur": "^4.1.3",
 		"mkdirp": "^1.0.4",
@@ -89,14 +91,19 @@
 		"postcss": "^8.1.7",
 		"postcss-import": "^13.0.0",
 		"postcss-preset-env": "^6.7.0",
+		"prettier": "^2.2.1",
+		"prettier-plugin-svelte": "^1.4.1",
 		"reflect-metadata": "^0.1.13",
 		"rimraf": "^3.0.2",
 		"rollup": "^2.33.3",
 		"rollup-plugin-svelte": "^6.1.1",
 		"rollup-plugin-terser": "^7.0.2",
 		"sapper": "^0.28.10",
+		"sass": "^1.29.0",
 		"svelte": "^3.29.7",
 		"svelte-check": "^1.1.13",
+		"svelte-dnd-action": "^0.6.22",
+		"svelte-materialify": "^0.3.4",
 		"svelte-preprocess": "^4.6.0",
 		"tailwindcss": "^2.0.1",
 		"tslib": "^2.0.3",
@@ -105,6 +112,6 @@
 		"utf-8-validate": "^5.0.3"
 	},
 	"engines": {
-		"node": "10"
+		"node": "12"
 	}
 }
