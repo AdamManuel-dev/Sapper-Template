@@ -1,7 +1,7 @@
 {
-	"short_name": "Opinionated Sapper project base",
-	"name": "An extremely opinionated Sapper project base",
-	"description": "A template that includes Svelte with Sapper, Firebase functions and hosting, TypeScript and TypeGraphQL, Tailwind CSS, ESLint, and automatic building and deployment with GitHub Actions",
+	"short_name": "Sapper",
+	"name": "Sapper Project",
+	"description": "A template",
 	"categories": [
 		"personalization",
 		"productivity"
@@ -23,7 +23,7 @@
 		}
 	],
 	"start_url": "/",
-	"display": "minimal-ui",
+	"display": "fullscreen",
 	"background_color": "#FFFFFF",
 	"theme_color": "#3F83F8",
 	"screenshots": [

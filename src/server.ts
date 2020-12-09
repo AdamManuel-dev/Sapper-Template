@@ -2,7 +2,6 @@ import * as sapper from "@sapper/server"; // eslint-disable-line import/no-unres
 import compression from "compression";
 import express, { Express } from "express";
 import sirv from "sirv";
-import { createApolloServer } from "./graphql";
 
 const PORT = process.env.PORT; // eslint-disable-line prefer-destructuring
 const mode = process.env.NODE_ENV;
@@ -12,10 +11,6 @@ const main = require.main === module || require.main?.filename.match(/__sapper__
 
 const createSapperAndApolloServer = async (graphqlPath = "/graphql"): Promise<Express> => {
 	const app = express();
-
-	const apolloServer = await createApolloServer();
-
-	apolloServer.applyMiddleware({ app, path: graphqlPath });
 
 	if (main) {
 		app.use(sirv("static", { dev }));
