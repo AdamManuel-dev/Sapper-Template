@@ -33,6 +33,17 @@ Forked from babichjacob [@babichjacob](https://github.com/babichjacob)'s [`Opini
 
 This template comes from combining two of my smaller ones: [one for Tailwind CSS (PostCSS)](https://github.com/babichjacob/sapper-postcss-template), and [another for TypeScript and GraphQL](https://github.com/babichjacob/sapper-typescript-graphql-template). If this is too much for you, check out one of those!
 
+### 💽 Cloning
+
+You can clone this template using degit using one of the following commands. 
+
+```bash
+npx degit AdamManuel-dev/Sapper-Template appName
+npx degit AdamManuel-dev/Sapper-Template#no-material-no-graphql appName
+npx degit AdamManuel-dev/Sapper-Template#no-material appName
+npx degit AdamManuel-dev/Sapper-Template#no-graphql appName
+```
+
 ### ⬇️ Install Dependencies
 
 You need to be using version 12 or higher of Node; the `package.json` `engines` field only specifies `10` for Cloud Functions for Firebase.
