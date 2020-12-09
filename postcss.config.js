@@ -1,25 +1,29 @@
-const cssnano = require("cssnano");
-const postcssImport = require("postcss-import");
-const tailwindcss = require("tailwindcss");
-const tailwindcssConfig = require("./tailwind.config");
-
-const mode = process.env.NODE_ENV;
-const dev = mode === "development";
+const { tailwindExtractor } = require("tailwindcss/lib/lib/purgeUnusedStyles");
 
 module.exports = {
-	plugins: [
-		postcssImport,
-
-		tailwindcss(tailwindcssConfig),
-
-		// Plugins for polyfills and the like (such as postcss-preset-env) should generally go here
-		// but a few have to run *before* Tailwind
-
-		!dev && cssnano({
-			preset: [
-				"default",
-				{ discardComments: { removeAll: true } },
+	purge: {
+		content: [
+			"./src/**/*.html",
+			"./src/**/*.svelte",
+		],
+		options: {
+			defaultExtractor: (content) => [
+				// This is an internal Tailwind function that we're not supposed to be allowed to use
+				// So if this stops working, please open an issue at
+				// https://github.com/babichjacob/sapper-firebase-typescript-graphql-tailwindcss-actions-template/issues
+				// rather than bothering Tailwind Labs about it
+				...tailwindExtractor(content),
+				// Match Svelte class: directives (https://github.com/tailwindlabs/tailwindcss/discussions/1731)
+				...[...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group),
 			],
-		}),
-	].filter(Boolean),
+			keyframes: true,
+		},
+	},
+	theme: {
+		extend: {},
+	},
+	variants: {
+		extend: {},
+	},
+	plugins: [],
 };
