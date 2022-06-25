@@ -53,7 +53,7 @@
 		"firebase-admin": "^9.4.1",
 		"firebase-functions": "^3.11.0",
 		"firebase-tools": "^8.16.2",
-		"node-fetch": "^2.6.1",
+		"node-fetch": "^2.6.7",
 		"sirv": "^1.0.7"
 	},
 	"devDependencies": {
